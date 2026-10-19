@@ -65,19 +65,93 @@ body {
      color: #ff8f2a;
  }
 
- .display-2 {
-     margin-top: -250px;
-     font-size: 100px;
- }
+/* Hero section */
+.hero {
+    background: linear-gradient(
+        135deg,
+        #13051d 0%,
+        #26113d 50%,
+        #3b1b5f 100%
+    );
+    width: 100%;
+    min-height: 680px;
+    height: auto;
+    padding: 40px 0 !important;
+}
 
- .phone {
-     height: 500px;
-     margin-top: -250px;
- }
+/* Main heading */
+.display-2 {
+    font-size: clamp(42px, 6vw, 80px);
+    line-height: 1.1;
+    margin-top: 0;
+}
 
- .col-lg-4 {
-     margin-top: -250px;
- }
+/* Phone image */
+.phone {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 0;
+}
+
+/* Right section */
+.hero .col-lg-4 {
+    margin-top: 0;
+}
+
+/* Responsive tablet and mobile */
+@media (max-width: 991px) {
+    .hero {
+        min-height: auto;
+        padding: 40px 0 !important;
+    }
+
+    .hero .row {
+        min-height: auto !important;
+    }
+
+    .display-2 {
+        font-size: clamp(40px, 8vw, 65px);
+    }
+
+    .phone {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-2 {
+        font-size: 42px;
+    }
+
+    .phone {
+        max-width: 220px;
+    }
+
+    .hero .col-lg-4 {
+        margin-top: 20px;
+    }
+
+    .items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .third-page {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
  .bg-success {
      border-radius: 50px;
@@ -243,7 +317,5 @@ body {
   }
  
  }
-
-
 
  
